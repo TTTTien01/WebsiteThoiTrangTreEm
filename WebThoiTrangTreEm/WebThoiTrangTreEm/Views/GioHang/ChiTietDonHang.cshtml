@@ -1,0 +1,64 @@
+﻿@model MyClass.Models.Orderdetails
+
+@{
+	ViewBag.Title = "Details";
+	Layout = "~/Views/Shared/_LayoutHome.cshtml";}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<section class="content my-2">
+		<div class="card">
+			<div class="card-header">
+				<div class="row">
+					<div class="col-md-6">
+						<strong class="text-danger">CHI TIẾT ĐƠN HÀNG</strong>
+					</div>
+				</div>
+			</div>
+			<div class="card-body ">
+
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th></th>
+							<th>
+								Tên sản phẩm
+							</th>
+							<th>
+								Giá
+							</th>
+							<th>
+								Số lượng
+							</th>
+							<th>
+								Thành tiền
+							</th>
+
+							<th>
+								Ngày tạo
+							</th>
+						</tr>
+					</thead>
+					@{ int tongtien = 0;}
+					@foreach (var chitiet in ViewBag.ListChiTiet)
+					{
+						<tr>
+							<td>@chitiet.Id</td>
+							<td>@chitiet.NameProduct</td>
+							<td>@chitiet.Price</td>
+							<td>@chitiet.quantity</td>
+							<td>@chitiet.Amount</td>
+							<td>@chitiet.CreatedAt</td>
+						</tr>
+						tongtien += chitiet.Amount;
+					}
+
+				</table>
+
+			</div>
+			<b>Tổng Tiền: @tongtien.ToString("#,##0")</b>
+			<br />
+		</div>
+	</section>
+</div>
+

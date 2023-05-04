@@ -1,0 +1,107 @@
+﻿@model IEnumerable<MyClass.Models.ProductCategory>
+@{
+	ViewBag.Title = "Home";
+	Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@section header{
+	<link rel="stylesheet" href="/Public/css/owl.carousel.min.css" type="text/css">
+	<script src="/Public/js/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+}
+
+
+@Html.Action("Slideshow", "Module")
+
+<br />
+<!-- Banner Section Begin -->
+<section class="banner spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 offset-lg-4">
+				<div class="banner__item">
+					<div class="banner__item__pic">
+						<img src="~/Public/images/h6.jpg" width="490px" />
+					</div>
+					<div class="banner__item__text">
+						<h2>Áo dài tết</h2>
+						<a href="~/tat-ca-san-pham">Mua ngay</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="banner__item banner__item--middle">
+					<div class="banner__item__pic">
+						<img src="~/Public/images/h8.jpg" height="300px" width="500px" />
+					</div>
+					<div class="banner__item__text">
+						<h2>Set bộ</h2>
+						<a href="~/tat-ca-san-pham">Mua ngay</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="banner__item banner__item--last">
+					<div class="banner__item__pic">
+						<img src="~/Public/images/h2.jpg" width="500px" />
+					</div>
+					<div class="banner__item__text">
+						<h2>Váy hoa</h2>
+						<a href="~/tat-ca-san-pham">Mua ngay</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Banner Section End -->
+<!-- Product Section Begin
+<section class="product spad">
+	<div class="container">
+
+		foreach (var cate in Model)
+		{
+			Html.Action("HomeProduct", "Home", new { id = cate.Id })
+		}
+	</div>
+</section>
+<!-- Product Section End -->
+<!-- Categories Section Begin -->
+<section class="categories spad">
+	<div class="container text-center">
+		<div class="categories__hot__deal">
+			<p><sup style="font-size: 70px">❝</sup>Thiên đường thời trang dành cho trẻ Nâng bước trẻ em . Chắp cánh cho con . Chìa khoá niềm vui cho bé tạo nên hình ảnh của con . Bạn đồng hành giúp bé yêu mau lớn. Luôn đồng hành cùng tuổi thơ bé khơi dậy tiềm năng bé</p>
+		</div>
+	</div>
+</section>
+<!-- Categories Section End -->
+<!-- Instagram Section Begin -->
+<section class="instagram spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="instagram__pic">
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a1.jpg"></div>
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a2.jpeg"></div>
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a3.jpg"></div>
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a4.jpg"></div>
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a5.jpg"></div>
+					<div class="instagram__pic__item set-bg" data-setbg="/Public/images/anhhome/a6.jpg"></div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="instagram__text">
+					<h2>MUA SẮM</h2>
+					<p>
+						Mua sắm thả ga cho bé mà các mẹ không cần lo về giá cả. BaBy Shop luôn cập nhật những mẫu mới dành cho các bé và luôn sắn sàng đáp ứng mọi yêu cầu và giải đáp thắc mắc của các mẹ.
+					</p>
+					<h3>#BABY_SHOP</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<br />
+
+
